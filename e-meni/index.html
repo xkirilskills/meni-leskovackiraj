@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="loadbody">
+    <div class="container">
+        <div class="image">
+            <img id="loadphoto" src="img/logo.jpg" alt="">
+        </div>
+    <div id="myProgress">
+        <div id="myBar"></div>
+    </div>
+    </div>
+</div>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #myProgress {
+            width: 90%;
+            background-color: white;
+            padding: 1px;
+            border: 2px red solid;
+            border-radius: 10px;
+            box-shadow: 0 0 5px black;
+        }
+
+        #myBar {
+            width: 1%;
+            height: 40px;
+            background-color: red;
+            border-radius: 9px;
+            box-shadow: 0 0 2px black;
+        }
+
+        #loadbody {
+            background-color: white;
+        }
+        #loadphoto{
+            width: 350px;
+            height: 350px;
+            padding: 100px;
+        }
+        .image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+    <script>
+        var i = 0;
+        function move() {
+            if (i == 0) {
+                i = 1;
+                var elem = document.getElementById("myBar");
+                var width = 1;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        i = 0;
+                        document.location="loaded.html"
+                    } else {
+                        width++;
+                        elem.style.width = width + "%";
+                    }
+                }
+            }
+        }
+        onload(move());
+    </script>
+</body>
+
+</html>

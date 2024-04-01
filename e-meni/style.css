@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@keyframes pop-in {
+    0%{
+        scale: 0.8;
+    }
+    50%{
+        scale: 1.04;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@keyframes fade-in{
+    from{
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
+}
+body {
+  background-color: red;
+}
+#main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+  color: white;
+  animation: fade-in 1s;
+}
+#logoslika{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 125px;
+    height: 100px;
+    animation: fade-in 1s;
+}
+.sections {
+    margin: auto;
+    border: 1px solid black;
+    background-color: red;
+    border-radius: 10px;
+    width: 90%;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px black;
+}
+.images {
+  position: relative;
+  text-align: center;
+  margin: 10px;
+  animation: pop-in 1s;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-shadow: 0 0 5px whitesmoke;
+  font-weight: bold;
+}
+#slika {
+  border-radius: 15px;
+  margin: auto;
+  width: 250px;
+  height: 190px;
+  border: 1px solid black;
+  box-shadow: 0 0 6px black;
+  object-fit: cover;
+}
+
+
+/*SENDVICI*/
+
+
+nav{
+    margin: 10px;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 1s;
+}
+nav ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+nav ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 10px;
+    width: 60px;
+    height: 30px;
+    font-size: 19px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: wheat ;
+    color: black;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
+}
+nav ul li:active{
+    scale: 0.7;
+    color: white;
+    background-color: black;
+}
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid black;
+    background-color: #E8751A;
+    border-radius: 10px;
+    width: 90%;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px black;
+    animation: pop-in 1s;
+}
+.meni{
+    margin: 0 25px;
+    display: flex;
+    animation: fade-in 1.5s;
+}
+
